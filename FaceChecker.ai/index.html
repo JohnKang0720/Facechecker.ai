@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Hacks</title>
+    <script defer src=  "./face-api.min.js"></script>
+    <script defer src = "./index.js"> </script>
+</head>
+<style>
+#SAVEIMAGE, #download, #SAVEIMG2, #imgupload{
+position: absolute;
+left: 0;
+top: 0;
+}
+#SAVEIMAGE{
+top: 20px;
+}
+#SAVEIMG2{
+top: 40px;
+}
+#downloads{
+margin-top: 60px;
+margin-left: -10px;
+}
+#video{
+    position: absolute;
+    margin-left: 900px;
+    margin-top: -100px;
+}
+#canvas{
+    position: absolute; 
+    margin-left: -160px;
+   margin-top: 70px;
+
+}
+#imgconvert{
+    position: absolute;
+    margin-left: -140px;
+    margin-top: -25px;
+}
+
+#newcan{
+    
+    position: absolute;
+      top: 0;
+      left: 0;
+     margin-top: 600px;
+}
+
+#xsign{
+    background: white;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    
+}
+#xsign::after{
+    position: absolute;
+    content: "\274c";
+    font-size: 50px;
+    color: red;
+    line-height: 100px;
+    text-align: center;
+    margin-top: 700px;
+    margin-left: 500px;
+    font-size: 200px;
+    animation-name: rise;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+@keyframes rise{
+    0%{
+    opacity: 0;
+    transform: translateY(600px);
+    }
+    50%{
+  opacity: 0.5;
+    }
+    75%{
+        opacity: 1;
+
+    }
+}
+:root {
+  --borderWidth: 50px;
+  --height: 200px;
+  --width: 120px;
+  --borderColor: #78b13f;
+ 
+}
+#ysign {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: var(--height);
+  width: var(--width);
+  border-bottom: var(--borderWidth) solid var(--borderColor);
+  border-right: var(--borderWidth) solid var(--borderColor);
+  margin-left: 900px;
+   visibility: hidden;
+    animation-name: rise;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+#para{
+    margin-top: -1100px;
+    margin-left: 280px;
+    font-size: 100px;
+
+}
+#heading{
+    position: absolute;
+    margin-left:470px;
+    font-size: 50px;
+}
+#imgg{
+    width: 150px;
+    height: 200px;
+    margin-left: 90px;
+}
+</style>
+<body>
+<h1 id = "heading"> FaceChecker.ai <br> <img src = "Screen Shot 2021-03-28 at 9.07.47 PM.png" id = "imgg"> </h1>
+
+<video id = "video" width = "400" height = "400" autoplay> </video>
+<canvas id = "canvas" width = "400" height = "400"> </canvas>
+<button id = "SAVEIMAGE"> Person 1 </button>
+<button id = "SAVEIMG2"> ID</button>
+<button id = "downloads"> Download </button>
+<input type = "file" id = "imgupload" >
+<p id = "bruh"> </p>
+<img id = "imgconvert" src = ""> </img>
+<div id = "xsign"> UNIDENTICAL! CANNOT ENTER </div>
+<div id = "ysign"> IDENTICAL! VALID </div>
+</body>
+</html>
